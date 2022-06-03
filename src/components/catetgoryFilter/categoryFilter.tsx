@@ -129,7 +129,10 @@ const CategoryUl = styled.ul`
   list-style: none;
   overflow-x: scroll;
   -ms-overflow-style: none;
-  scrollbar-width: none;
+  scrollbar-width: thin;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 
   li + li {
     margin-left: 6px;
