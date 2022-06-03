@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-apple",
+  "name": "reason-to-code",
   "version": "2.0.0",
-  "description": "Gatsby blog starter kit with beautiful and responsive design",
+  "description": "blog for figuring out questions while weaving codes",
   "main": "index.js",
   "private": true,
   "scripts": {
