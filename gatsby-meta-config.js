@@ -20,9 +20,9 @@ const metaConfig = {
   title: "Reason to Code",
   description: `Sukyeong's Blog`,
   author: "Sukyeong",
-  siteUrl: "https://reason-to-code.netlify.app",
+  siteUrl: "http://www.reason-to-code.com",
   lang: "utf-8",
-  utterances: "sungik-choi/gatsby-starter-apple-comment",
+  utterances: "Sukyeong-hyu/reason-to-code-comments",
   links: {
     github: "https://github.com/Sukyeong-hyu",
   },
