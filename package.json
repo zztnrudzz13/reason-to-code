@@ -1,5 +1,5 @@
 {
-  "name": "reason-to-code",
+  "name": "gatsby-starter-apple",
   "version": "2.0.0",
   "description": "blog for figuring out questions while weaving codes",
   "main": "index.js",
@@ -79,5 +79,5 @@
   "bugs": {
     "url": "https://github.com/Sukyeong-hyu/reason-to-code/issues"
   },
-  "homepage": "https://github.com/Sukyeong-hyu/reason-to-code.git"
+  "homepage": "https://github.com/sungik-choi/gatsby-starter-apple"
 }
