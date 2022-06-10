@@ -152,6 +152,12 @@ Bundle Phobia에서 dependency에 대해서도 확인할 수 있는데요, Formi
 
 <img width="290" alt="스크린샷 2022-06-10 오후 8 36 28" src="https://user-images.githubusercontent.com/81177665/173056706-7ba7d5a6-0b54-4255-80a3-767ce32be3cd.png">
 
+## State Management
+
+form을 만들다 보면 하나의 form을 여러 컴포넌트에서 분리해서 값을 입력받고 다시 한 곳에서 모아서 데이터를 서버로 보내야 하는 상황이 생길 수 있습니다. 여기에서 저는 `Formik`의 힘이 발휘된다고 생각합니다.  
+`Formik`에는 `useFormikContext()`라는 `React Context`를 사용한 커스텀 훅이 존재합니다. form을 넣고자 하는 컴포넌트들의 부모 컴토넌트를 `<Formik>` 태그로 감싸주면, `Context API`를 사용하듯이 내부에서 state 관리를 할 수 있습니다.  
+하지만, `React-Hook-Form`은 자신이 만든 컴포넌트를 리덕스의 `connect`를 사용해서 리덕스와 연결해주는 방식입니다. 이는 최상단의 위치에서 관리할 필요없는 form state를 다른 state들과 함께 관리하게 되면서, 프로젝트 사이즈가 커질수록 리덕스가 비대해지고 관심사 분리에 취약해질 수 있다는 단점이 있습니다.
+
 ## Conclusion
 
 모든 라이브러리나 프레임워크가 그렇듯이, 해당 라이브러리나 프레임워크가 만들어지는 목적에 부합하게 만들기 위해 어떤 기능은 장점이 극대화되고, 반대로 그 기능으로 인해 생기는 `side-effect`가 생기기도 합니다. `Formik`은 리액트가 권장하는 Controlled Component를 만드는 것에 힘썼다면, `React-Hook-Form`은 퍼포먼스 최적화에 힘을 실었다고 할 수 있습니다.
