@@ -194,6 +194,12 @@ const pwaPlugins = [
 module.exports = {
   siteMetadata,
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["G-42RZCZ93MF"],
+      },
+    },
     ...corePlugins,
     ...devPlugins,
     ...imagePlugins,
