@@ -127,7 +127,7 @@ export default function CustomDrawerContent(props) {
 <br>
 리액트를 배운 지 얼마 안 됐을 때의 코드이기 때문에, 심각한 상태의 코드이지만, 더 극적으로 컴포넌트 설계의 중요성을 드러내기 위해 가져왔습니다. 그럼 이제부터 `Single Responsibility`를 지킬 수 있는 방식으로 컴포넌트를 짜봅시다.
 
-### Seperating CSS
+### Separating CSS
 
 공통 컴포넌트를 만들 때에는 CSS만 따로 분리해서 컴포넌트를 만들 수 있습니다. (현재는 width와 height를 고정값으로 두었지만 더 생산성을 위해서 props로 넘겨받을 수도 있을 것입니다.)
 
@@ -160,7 +160,7 @@ export default function CustomDrawerContent(props) {
 
 <br>
 
-### Seperating Data
+### Separating Data
 
 데이터는 컴포넌트 위치에서 받아와서 그 자리에서 가공하는 것이 아니라, 컴포넌트에서 사용하기 편하게 미리 다른 위치에서 가공을 완료하고, 컴포넌트 위치에서는 해당 데이터를 사용하기만 하면 되게끔 해주어야 합니다. 이러한 상황에서는 `Custom Hook`를 활용할 수 있는데요, 아래처럼 커스텀 훅을 활용한 예시를 살펴봅시다.
 
