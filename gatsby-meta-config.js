@@ -22,9 +22,9 @@ const metaConfig = {
   author: "Sukyeong",
   siteUrl: "http://www.reason-to-code.com",
   lang: "utf-8",
-  utterances: "Sukyeong-hyu/reason-to-code-comments",
+  utterances: "zztnrudzz13/reason-to-code-comments",
   links: {
-    github: "https://github.com/Sukyeong-hyu/reason-to-code",
+    github: "https://github.com/zztnrudzz13/reason-to-code",
   },
   favicon: "src/images/icon.png",
 }
