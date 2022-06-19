@@ -1,7 +1,7 @@
 ---
 title: "Formik을 사용해야 하는 이유"
 category: "Library"
-date: "2020-06-07 11:11:00 +09:00"
+date: "2022-06-07 11:11:00 +09:00"
 desc: "리액트에서 Formik으로 form을 관리해야 하는 이유를 알아보자"
 thumbnail: "./images/formik/formik.png"
 alt: "formik official thumbnail"
