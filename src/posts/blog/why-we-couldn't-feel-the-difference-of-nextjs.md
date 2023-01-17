@@ -2,9 +2,9 @@
 title: "Nest.js를 사용하면서 리액트랑 별반 다르지 않다고 느꼈던 이유"
 category: "Next"
 date: "2023-01-17 13:11:00 +09:00"
-desc: "개발을 할 때 컴포넌트를 설계하는 것이 중요한 이유를 알아보자"
+desc: "Next.js가 제공하는 여러 렌더링 패턴을 알아보자"
 thumbnail: "./images/next/next.webp"
-alt: "react official thumbnail"
+alt: "next official thumbnail"
 ---
 
 ## Next.js를 사용하는 회사
