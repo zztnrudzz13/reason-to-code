@@ -52,8 +52,8 @@ const useUserForm = () => {
   const { mutate: createUser } = useMutationCreateUser();
   const { mutate: deleteUser } = useMutationDeleteUser();
   const { mutate: updateUser } = useMutationUpdateUser();
-  const [schedule, setSchedule] = useState<Omit<Schedule, 'id'>>(SCHEDULE_TEMPLATE);
-  const [errorMessage, setErrorMessage] = useState<string | undefined>(undefined);
+  const [user, setUser] = useState(SCHEDULE_TEMPLATE);
+  const [errorMessage, setErrorMessage] = useState(undefined);
 
   // Handling functions...
 }
