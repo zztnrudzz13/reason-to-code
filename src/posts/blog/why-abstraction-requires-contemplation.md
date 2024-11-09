@@ -42,24 +42,24 @@ const RedactionWrapper = ({ children }: { children: React.ReactNode }) => {
 
 ## 이게 왜 여기 있어요?
 
-좋은 추상화를 위해 이제는 한 단계 더 고민해야한다는 생각이 든 것은 최근에 본 면접이었습니다. 과제테스트를 보면서 폼을 구현하는 조건이 있었습니다. 많이 해왔던 구현사항이었기 때문에 침착하게 문제를 풀었습니다. 아래는 제가 작성했던 코드를 일부 변경한 코드입니다. (과제 구현사항을 유추할 수 없도록 변경하였습니다.)
+좋은 추상화를 위해 이제는 한 단계 더 고민해야한다는 생각이 든 것은 최근에 본 면접이었습니다. 시험을 보면서 폼을 구현하였는데요, 현업에서 여러번 짜는 익숙한 형태의 폼입니다. 아래는 제가 과제 구현사항을 유추할 수 없도록 각색한 형태의 예시입니다.
 
 ```javascript
 const useUserForm = () => {
-  const { userId } = useParams();
-  const { data: initialUser } = useQueryGetUser(userId);
-  const isEditMode = initialUser !== undefined;
-  const { mutate: createUser } = useMutationCreateUser();
-  const { mutate: deleteUser } = useMutationDeleteUser();
-  const { mutate: updateUser } = useMutationUpdateUser();
-  const [user, setUser] = useState(SCHEDULE_TEMPLATE);
-  const [errorMessage, setErrorMessage] = useState(undefined);
+  const { userId } = useParams()
+  const { data: initialUser } = useQueryGetUser(userId)
+  const isEditMode = initialUser !== undefined
+  const { mutate: createUser } = useMutationCreateUser()
+  const { mutate: deleteUser } = useMutationDeleteUser()
+  const { mutate: updateUser } = useMutationUpdateUser()
+  const [user, setUser] = useState(SCHEDULE_TEMPLATE)
+  const [errorMessage, setErrorMessage] = useState(undefined)
 
   // Handling functions...
 }
 ```
 
-면접에서 해당 코드에 대해 이야기를 나누어볼 기회가 생겼는데, 저에게 결합과 응집에 대해 여쭤보셨습니다. 그리고 면접은 전체적으로 '추상화'를 함께 고민하는 방향으로 흘러갔습니다. UI 로직에서의 가독성을 좋게 하기 위해서 커스텀훅을 만들었는데, 오히려 모든 로직을 몰아넣은 커스텀 훅의 가독성은 생각하지 못한 것이었습니다. 면접이 끝나갈 때쯤 제 코드를 다시 보니, useParams(URL의 파라미터를 가져오는 훅)가 form안에 들어가있어야 할 이유가 없었습니다. 면접관님은 이러한 상황에서는 어떻게 코드를 짜실 것 같은 지에 대해 여쭤보았습니다. 현재 여기서는 mutate를 하는 로직이 form 보다는 UI에 더 <bold>결합력이 높은</bold> 로직이기 때문에 UI쪽에 두면 많은 가독성 문제가 해결될 것이라고 말씀하셨습니다. 정답이 있는 문제가 아니더라도 제가 면접관님처럼 판단할 수 있는 기준을 갖기 위해서는 면접에서 여러번 등장한 결합과 응집에 대해 알아야겠다고 생각했습니다.
+면접에서 위와 같은 코드에 대해 이야기를 나누어볼 기회가 생겼는데, 전체적으로 '추상화'를 함께 고민하는 방향으로 흘러갔습니다. UI 로직에서의 가독성을 좋게 하기 위해서 커스텀훅을 만들었는데, 오히려 모든 로직을 몰아넣은 커스텀 훅의 가독성은 생각하지 못한 것이었습니다. 면접이 끝나갈 때쯤 제 코드를 다시 보니, useParams(URL의 파라미터를 가져오는 훅)가 form안에 들어가있어야 할 이유가 없었습니다. 정답이 있는 문제가 아니더라도 제가 근거를 가지고 판단하기 위해서는 뚜렷한 기준이 있어야겠다라는 생각이 들었습니다.
 
 ## Coupling and Cohesion
 
